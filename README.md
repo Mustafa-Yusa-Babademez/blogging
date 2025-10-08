@@ -99,3 +99,34 @@ Returns access and refresh tokens.
 
 #### 5. Delete My Post
 **DELETE** `/api/posts/<id>/`
+
+#### 6. See Followings' Posts (friends feed)
+**GET** `/api/posts/friends/`
+
+### Follow
+
+#### 1. Follow a user
+**POST** `/api/follow/`
+
+**Raw JSON body**
+```json
+{
+  "username": "mustafa"
+}
+```
+
+#### 2. Unfollow a user
+**POST** `/api/follow/unfollow/`
+
+**Raw JSON body**
+```json
+{
+  "username": "mustafa"
+}
+```
+
+#### 3. List Who I Follow (Following List)
+**GET** `/api/follow/following/`
+
+#### 4. List My Followers
+**GET** `/api/follow/followers/`
