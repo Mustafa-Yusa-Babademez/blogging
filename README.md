@@ -42,13 +42,13 @@ python manage.py runserver
 
 ---
 
-### 🧑 Authentication & User
+### Authentication & User
 
 #### 1. Register User  
 **POST** `/api/register/`  
 Registers a new user.
 
-📥 **Raw JSON body**
+**Raw JSON body**
 ```json
 {
   "username": "yusa",
@@ -61,4 +61,41 @@ Registers a new user.
 **POST** `/api/token/`
 Returns access and refresh tokens.
 
+**Raw JSON body**
+```json
+{
+  "username": "yusa",
+  "password": "password123"
+}
+```
+### Post
+#### 1. Create a post  
+**POST** `/api/posts/`
 
+**Raw JSON body**
+```json
+{
+  "title": "My First Blog",
+  "content": "This is the content of my first post."
+}
+```
+
+#### 2. Update a Post
+**PUT** `/api/posts/{id}/`
+
+**Raw JSON body**
+```json
+{
+  "title": "Updated Title",
+  "content": "Edited content"
+}
+```
+
+#### 3. See All Posts (global feed)
+**GET** `/api/posts/`
+
+#### 4. See My Posts
+**GET** `/api/posts/mine/`
+
+#### 5. Delete My Post
+**DELETE** `/api/posts/<id>/`
