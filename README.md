@@ -1,6 +1,6 @@
 # Blogging App
 
-# Description
+## Description
 
 A simple blogging platform built with **Django** and **Django REST Framework** that allows users to:
 - Register & authenticate using JWT tokens  
